@@ -11,7 +11,7 @@
 
 ## 📁 프로젝트 파일 및 기능 설명
 
-### ✅ `PresignedUrl.java`
+### PresignedUrl.java
 
 * **기능**: Presigned URL을 생성하여 외부에서 인증 없이 파일 업로드, 다운로드, 삭제 가능하도록 지원.
 * **지원 메서드**:
@@ -23,7 +23,7 @@
 
 ---
 
-### ✅ `S3AP.java`
+### S3AP.java
 
 * **기능**: S3 Access Point 관련 설정 및 정책 적용 코드
 * **주요 기능**:
@@ -34,7 +34,7 @@
 
 ---
 
-### ✅ `S3Async.java`
+###  S3Async.java
 
 * **기능**: `S3AsyncClient`를 사용하여 비동기 방식으로 S3 파일 업로드 수행
 * **주요 기술**: `CompletableFuture`, `nio.Path`, Netty 기반
@@ -42,7 +42,7 @@
 
 ---
 
-### ✅ `S3BucketDel.java`
+### S3BucketDel.java
 
 * **기능**: 버킷 전체 삭제
 * **기능 구성**:
@@ -53,7 +53,7 @@
 
 ---
 
-### ✅ `S3BucketManager.java`
+### S3BucketManager.java
 
 * **기능**: 버킷 생성 및 정책(Public Read 등) 자동 적용
 * **지원 정책 예시**:
@@ -70,7 +70,7 @@
 
 ---
 
-### ✅ `S3MultiFileUploader.java`
+### S3MultiFileUploader.java
 
 * **기능**: 여러 파일을 동시에 S3 버킷에 업로드 (멀티파일 업로드)
 * **사용 기술**: `S3TransferManager`, `UploadFileRequest`
@@ -81,7 +81,7 @@
 
 ---
 
-### ✅ `S3PublicBucket.java`
+### S3PublicBucket.java
 
 * **기능**: 퍼블릭 접근 가능한 버킷 구성 및 객체 업로드
 * **특징**:
@@ -91,7 +91,7 @@
 
 ---
 
-### ✅ `S3test.java`
+### S3test.java
 
 * **기능**: 기본적인 파일 업로드 및 다운로드 예제
 * **구성**:
@@ -109,7 +109,7 @@
 * AWS SDK for Java v2.x
 * Ubuntu CLI 기반 테스트 환경
 * S3 Region: `eu-north-1`, `ap-northeast-2` 등 다양하게 테스트
-
+* 
 ---
 
 ## 💡 학습 및 실습 내용 요약
@@ -129,6 +129,16 @@
 * 실제 S3 버킷 사용 시 민감한 정보(AWS credentials)는 환경 변수 또는 AWS CLI를 통해 설정 권장
 * `PresignedUrl`은 보안상 유효시간 제한을 반드시 고려해야 하며, 외부 공유 시 주의 필요
 * 오프라인 환경에서는 aws sdk jar 수동 다운로드 및 종속성 관리 필요 (pom.xml 내 jar만으로는 동작 안 됨)
+* EC2 Ubuntu 환경에서 실행 
+| 구분               | JAR 파일명(대표)                                                                                                                                  |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AWS SDK**      | aws-core, sdk-core, s3, s3control, s3-transfer-manager, sts, profiles, regions, protocol-core, endpoints-spi, utils, transfer                |
+| **프로토콜/인증**      | auth, http-auth, http-auth-aws, http-auth-spi, aws-json-protocol, aws-query-protocol, aws-xml-protocol, identity-spi                         |
+| **HTTP 클라이언트**   | apache-client, http-client-spi, httpclient, httpcore                                                                                         |
+| **Netty**        | netty-nio-client, netty-all, netty-buffer, netty-codec-http, netty-codec-http2, netty-common, netty-handler, netty-resolver, netty-transport |
+| **체크섬/재시도/메트릭**  | checksums, checksums-spi, metrics-spi, retries, retries-spi                                                                                  |
+| **JSON/Jackson** | json-utils, third-party-jackson-core                                                                                                         |
+| **로깅/유틸리티**      | slf4j-api, commons-logging, reactive-streams                                                                                                 |
 
 ---
 
