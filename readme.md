@@ -130,6 +130,7 @@
 * `PresignedUrl`은 보안상 유효시간 제한을 반드시 고려해야 하며, 외부 공유 시 주의 필요
 * 오프라인 환경에서는 aws sdk jar 수동 다운로드 및 종속성 관리 필요 (pom.xml 내 jar만으로는 동작 안 됨)
 * EC2 Ubuntu 환경에서 실행 
+
 | 구분               | JAR 파일명(대표)                                                                                                                                  |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **AWS SDK**      | aws-core, sdk-core, s3, s3control, s3-transfer-manager, sts, profiles, regions, protocol-core, endpoints-spi, utils, transfer                |
