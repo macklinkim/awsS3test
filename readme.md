@@ -1,5 +1,6 @@
 
-# AWS S3 awssdk controller 연동 전 test codes  (AWS SDK v2.x)
+# AWS S3 awssdk controller 연동 전 test codes
+### (AWS SDK v2.x)
 
 이 프로젝트는 Java 및 AWS SDK for Java 2.x를 활용하여 S3 버킷 생성, 파일 업로드/다운로드, presigned URL 생성, public bucket 설정, 멀티파일 업로드, access point 관리 등을 자동화한 예제 코드 모음입니다.
 실제 AWS 환경과 연동된 테스트 및 운영 목적의 코드로 구성되어 있으며, 각 파일은 main함수를 가지고 독립적 기능을 수행하도록 설계되어 있습니다.
